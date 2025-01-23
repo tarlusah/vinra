@@ -1,0 +1,40 @@
+app:
+  environment: environment
+
+spring:
+  application:
+    name: ids-vinra
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ids_test_vinra
+    username: secret
+    password: secret
+    hikari:
+      connection-timeout: 30000
+      maximum-pool-size: 10
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        id:
+          new_generator_mappings: true
+
+  flyway:
+    password: secret
+    user: secret
+    url: jdbc:postgresql://localhost:5432/ids_test_vinra
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+
+#  jackson:
+#    serialization:
+#      fail-on-empty-beans: false
+#    default-property-inclusion: non_null

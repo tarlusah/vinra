@@ -1,0 +1,1 @@
+insert into products(id, name) values ('10001', 'Test 1'), ('10002', 'Test 2');

@@ -1,0 +1,1 @@
+insert into customers(id, name) values ('31861ed7-c295-43f3-b053-c29f246692d5', 'abc');
